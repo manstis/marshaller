@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.anstis.pmml</groupId>
+    <artifactId>marshaller</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>marshaller-api</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-dev</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.treblereel.gwt.xml.mapper</groupId>
+      <artifactId>gwt-backend</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.treblereel.gwt.xml.mapper</groupId>
+      <artifactId>api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.treblereel.gwt.xml.mapper</groupId>
+      <artifactId>processor</artifactId>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- Java (specific version of bytecode needed for J2CL?) -->
+      <!--      <plugin>-->
+      <!--        <artifactId>maven-compiler-plugin</artifactId>-->
+      <!--        <version>${maven.compiler.plugin}</version>-->
+      <!--        <configuration>-->
+      <!--          <source>${maven.compiler.source}</source>-->
+      <!--          <target>${maven.compiler.target}</target>-->
+      <!--        </configuration>-->
+      <!--      </plugin>-->
+
+      <!-- GWT -->
+      <plugin>
+        <groupId>net.ltgt.gwt.maven</groupId>
+        <artifactId>gwt-maven-plugin</artifactId>
+        <configuration>
+          <moduleName>com.anstis.pmml.MarshallerAPI</moduleName>
+          <moduleShortName>MarshallerAPI</moduleShortName>
+        </configuration>
+      </plugin>
+
+      <!-- J2CL -->
+      <!--      <plugin>-->
+      <!--        <groupId>com.vertispan.j2cl</groupId>-->
+      <!--        <artifactId>j2cl-maven-plugin</artifactId>-->
+      <!--        <version>${maven.j2cl.plugin}</version>-->
+      <!--        <configuration>-->
+      <!--          <compilationLevel>BUNDLE_JAR</compilationLevel>-->
+      <!--        </configuration>-->
+      <!--        <executions>-->
+      <!--          <execution>-->
+      <!--            <id>build-js</id>-->
+      <!--            <phase>prepare-package</phase>-->
+      <!--            <goals>-->
+      <!--              <goal>build</goal>-->
+      <!--            </goals>-->
+      <!--          </execution>-->
+      <!--        </executions>-->
+      <!--      </plugin>-->
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+
+    </plugins>
+  </build>
+</project>
