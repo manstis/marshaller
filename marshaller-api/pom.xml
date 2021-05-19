@@ -12,10 +12,6 @@
   <packaging>jar</packaging>
 
   <dependencies>
-    <dependency>
-      <groupId>javax.xml.bind</groupId>
-      <artifactId>jaxb-api</artifactId>
-    </dependency>
 
     <!-- XMLMapper (XML (un)marshaller code generation) -->
     <dependency>
