@@ -59,7 +59,7 @@
         <artifactId>j2cl-maven-plugin</artifactId>
         <version>${maven.j2cl.plugin.version}</version>
         <configuration>
-          <compilationLevel>SIMPLE_OPTIMIZATIONS</compilationLevel>
+          <compilationLevel>ADVANCED_OPTIMIZATIONS</compilationLevel>
         </configuration>
         <executions>
           <execution>
