@@ -17,6 +17,7 @@
         <plugin>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-maven-plugin</artifactId>
+          <version>${maven.jetty.plugin.version}</version>
           <configuration>
             <scanIntervalSeconds>1</scanIntervalSeconds>
             <webApp>
@@ -29,6 +30,7 @@
         <plugin>
           <groupId>org.apache.tomcat.maven</groupId>
           <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>${maven.tomcat7.plugin.version}</version>
           <configuration>
             <addWarDependenciesInClassloader>false</addWarDependenciesInClassloader>
             <path>/</path>

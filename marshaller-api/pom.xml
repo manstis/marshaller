@@ -9,21 +9,15 @@
   </parent>
 
   <artifactId>marshaller-api</artifactId>
+  <packaging>jar</packaging>
 
   <dependencies>
-    <dependency>
-      <groupId>com.google.gwt</groupId>
-      <artifactId>gwt-user</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.google.gwt</groupId>
-      <artifactId>gwt-dev</artifactId>
-    </dependency>
     <dependency>
       <groupId>javax.xml.bind</groupId>
       <artifactId>jaxb-api</artifactId>
     </dependency>
 
+    <!-- XMLMapper (XML (un)marshaller code generation) -->
     <dependency>
       <groupId>org.treblereel.gwt.xml.mapper</groupId>
       <artifactId>gwt-backend</artifactId>
@@ -35,51 +29,54 @@
     <dependency>
       <groupId>org.treblereel.gwt.xml.mapper</groupId>
       <artifactId>processor</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- GWT3 Mappers (J2CL boiler plate code generation)  -->
+    <dependency>
+      <groupId>org.treblereel.j2cl.processors</groupId>
+      <artifactId>annotations</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.treblereel.j2cl.processors</groupId>
+      <artifactId>processors</artifactId>
+      <scope>provided</scope>
     </dependency>
 
   </dependencies>
 
   <build>
-    <plugins>
-      <!-- Java (specific version of bytecode needed for J2CL?) -->
-      <!--      <plugin>-->
-      <!--        <artifactId>maven-compiler-plugin</artifactId>-->
-      <!--        <version>${maven.compiler.plugin}</version>-->
-      <!--        <configuration>-->
-      <!--          <source>${maven.compiler.source}</source>-->
-      <!--          <target>${maven.compiler.target}</target>-->
-      <!--        </configuration>-->
-      <!--      </plugin>-->
 
-      <!-- GWT -->
-      <plugin>
-        <groupId>net.ltgt.gwt.maven</groupId>
-        <artifactId>gwt-maven-plugin</artifactId>
-        <configuration>
-          <moduleName>com.anstis.pmml.MarshallerAPI</moduleName>
-          <moduleShortName>MarshallerAPI</moduleShortName>
-        </configuration>
-      </plugin>
+    <plugins>
 
       <!-- J2CL -->
-      <!--      <plugin>-->
-      <!--        <groupId>com.vertispan.j2cl</groupId>-->
-      <!--        <artifactId>j2cl-maven-plugin</artifactId>-->
-      <!--        <version>${maven.j2cl.plugin}</version>-->
-      <!--        <configuration>-->
-      <!--          <compilationLevel>BUNDLE_JAR</compilationLevel>-->
-      <!--        </configuration>-->
-      <!--        <executions>-->
-      <!--          <execution>-->
-      <!--            <id>build-js</id>-->
-      <!--            <phase>prepare-package</phase>-->
-      <!--            <goals>-->
-      <!--              <goal>build</goal>-->
-      <!--            </goals>-->
-      <!--          </execution>-->
-      <!--        </executions>-->
-      <!--      </plugin>-->
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven.compiler.plugin.version}</version>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.vertispan.j2cl</groupId>
+        <artifactId>j2cl-maven-plugin</artifactId>
+        <version>${maven.j2cl.plugin.version}</version>
+        <configuration>
+          <compilationLevel>BUNDLE_JAR</compilationLevel>
+        </configuration>
+        <executions>
+          <execution>
+            <id>build-js</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>build</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 
+      <!-- Create a source JAR (for now) as this module is still used by the GWT example webapp -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>

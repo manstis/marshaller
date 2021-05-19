@@ -62,3 +62,11 @@ Remove duplicate `Extension` declaration from `Scorecard` and `TimeSeriesModel`
 - Change use of `@XmlElements` to `@XmlElementRefs`.
 
 Job done. Go have a beer.
+
+(8) Running...
+
+- Change directory to your generated project and issue the following commands:
+
+  - In one terminal window: `mvn gwt:codeserver -pl *-client -am`
+  - In another terminal window: `mvn jetty:run -pl *-server -am -Denv=dev`
+    
