@@ -19,7 +19,9 @@ import javax.xml.bind.annotation.XmlElementRefs;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+import jsinterop.annotations.JsType;
 import org.treblereel.gwt.xml.mapper.api.annotation.XmlUnwrappedCollection;
+import org.treblereel.j2cl.processors.annotations.GWT3Export;
 
 /**
  * <p>Java class for anonymous complex type.
@@ -53,6 +55,8 @@ import org.treblereel.gwt.xml.mapper.api.annotation.XmlUnwrappedCollection;
         "rule"
 })
 @XmlRootElement(name = "RuleSet")
+@JsType
+@GWT3Export
 public class RuleSet {
 
     @XmlElement(name = "Extension")

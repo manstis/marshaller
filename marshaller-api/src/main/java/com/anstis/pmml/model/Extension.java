@@ -19,6 +19,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+import jsinterop.annotations.JsType;
+import org.treblereel.j2cl.processors.annotations.GWT3Export;
 import org.w3c.dom.Element;
 
 /**
@@ -46,6 +48,8 @@ import org.w3c.dom.Element;
 //    "content"
 })
 @XmlRootElement(name = "Extension")
+@JsType
+@GWT3Export
 public class Extension implements ISequence {
 
     @XmlTransient

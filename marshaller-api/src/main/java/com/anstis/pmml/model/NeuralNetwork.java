@@ -19,6 +19,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
+import jsinterop.annotations.JsType;
+import org.treblereel.j2cl.processors.annotations.GWT3Export;
+
 /**
  * <p>Java class for anonymous complex type.
  *
@@ -71,6 +74,8 @@ import javax.xml.bind.annotation.XmlType;
         "modelVerification"
 })
 @XmlRootElement(name = "NeuralNetwork")
+@JsType
+@GWT3Export
 public class NeuralNetwork implements IPMML {
 
     @XmlElement(name = "Extension")

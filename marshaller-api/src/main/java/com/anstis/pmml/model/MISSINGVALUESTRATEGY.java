@@ -11,6 +11,9 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
+import jsinterop.annotations.JsType;
+import org.treblereel.j2cl.processors.annotations.GWT3Export;
+
 /**
  * <p>Java class for MISSING-VALUE-STRATEGY.
  *
@@ -31,6 +34,8 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlType(name = "MISSING-VALUE-STRATEGY")
 @XmlEnum
+@JsType
+@GWT3Export
 public enum MISSINGVALUESTRATEGY {
 
     @XmlEnumValue("lastPrediction")

@@ -18,6 +18,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+import jsinterop.annotations.JsType;
+import org.treblereel.j2cl.processors.annotations.GWT3Export;
+
 /**
  * <p>Java class for anonymous complex type.
  *
@@ -71,6 +74,8 @@ import javax.xml.bind.annotation.XmlType;
         "modelVerification"
 })
 @XmlRootElement(name = "TimeSeriesModel")
+@JsType
+@GWT3Export
 public class TimeSeriesModel implements IPMML {
 
     @XmlElement(name = "Extension")

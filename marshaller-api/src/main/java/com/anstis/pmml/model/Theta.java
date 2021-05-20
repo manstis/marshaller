@@ -15,6 +15,9 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+import jsinterop.annotations.JsType;
+import org.treblereel.j2cl.processors.annotations.GWT3Export;
+
 /**
  * <p>Java class for anonymous complex type.
  *
@@ -35,6 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "Theta")
+@JsType
+@GWT3Export
 public class Theta {
 
     @XmlAttribute(name = "i")

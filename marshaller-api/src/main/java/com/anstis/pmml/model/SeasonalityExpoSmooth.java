@@ -18,6 +18,9 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import jsinterop.annotations.JsType;
+import org.treblereel.j2cl.processors.annotations.GWT3Export;
+
 /**
  * <p>Java class for anonymous complex type.
  *
@@ -52,6 +55,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
         "array"
 })
 @XmlRootElement(name = "Seasonality_ExpoSmooth")
+@JsType
+@GWT3Export
 public class SeasonalityExpoSmooth {
 
     @XmlElement(name = "Array")

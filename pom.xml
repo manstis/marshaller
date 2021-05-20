@@ -18,7 +18,7 @@
     <maven.tomcat7.plugin.version>2.2</maven.tomcat7.plugin.version>
 
     <maven.org.treblereel.gwt.xml.mapper.version>0.2-SNAPSHOT</maven.org.treblereel.gwt.xml.mapper.version>
-    <maven.org.treblereel.j2cl.processors.version>0.1</maven.org.treblereel.j2cl.processors.version>
+    <maven.org.treblereel.j2cl.processors.version>0.3-SNAPSHOT</maven.org.treblereel.j2cl.processors.version>
 
     <!-- J2CL related properties -->
     <maven.j2cl.plugin.version>0.17-SNAPSHOT</maven.j2cl.plugin.version>

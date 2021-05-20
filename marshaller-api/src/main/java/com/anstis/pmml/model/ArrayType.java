@@ -15,6 +15,9 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+import jsinterop.annotations.JsType;
+import org.treblereel.j2cl.processors.annotations.GWT3Export;
+
 /**
  * <p>Java class for ArrayType complex type.
  *
@@ -43,6 +46,8 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlType(name = "ArrayType", propOrder = {
         "content"
 })
+@JsType
+@GWT3Export
 public class ArrayType {
 
     @XmlValue

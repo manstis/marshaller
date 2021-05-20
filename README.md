@@ -61,9 +61,12 @@ Remove duplicate `Extension` declaration from `Scorecard` and `TimeSeriesModel`
 - Mark each property with `@XmlUnwrappedCollection`.
 - Change use of `@XmlElements` to `@XmlElementRefs`.
 
+(8) Expose model to JavaScript 
+- Add `@JsType` and `@GWT3Export` to every POJO you want to use!
+
 Job done. Go have a beer.
 
-(8) Running...
+(9) Running...
 
 - Change directory to your generated project and issue the following commands:
 

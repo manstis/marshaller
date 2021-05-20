@@ -11,6 +11,9 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
+import jsinterop.annotations.JsType;
+import org.treblereel.j2cl.processors.annotations.GWT3Export;
+
 /**
  * <p>Java class for MULTIPLE-MODEL-METHOD.
  *
@@ -37,6 +40,8 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlType(name = "MULTIPLE-MODEL-METHOD")
 @XmlEnum
+@JsType
+@GWT3Export
 public enum MULTIPLEMODELMETHOD {
 
     @XmlEnumValue("majorityVote")

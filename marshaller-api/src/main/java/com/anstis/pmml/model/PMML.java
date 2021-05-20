@@ -19,7 +19,6 @@ import javax.xml.bind.annotation.XmlElementRefs;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.xml.mapper.api.annotation.XMLMapper;
 import org.treblereel.gwt.xml.mapper.api.annotation.XmlUnwrappedCollection;
@@ -107,7 +106,6 @@ public class PMML {
      * @return possible object is
      * {@link Header }
      */
-    @JsMethod
     public Header getHeader() {
         return header;
     }
@@ -118,7 +116,6 @@ public class PMML {
      * @param value allowed object is
      *              {@link Header }
      */
-    @JsMethod
     public void setHeader(Header value) {
         this.header = value;
     }
@@ -129,7 +126,6 @@ public class PMML {
      * @return possible object is
      * {@link MiningBuildTask }
      */
-    @JsMethod
     public MiningBuildTask getMiningBuildTask() {
         return miningBuildTask;
     }
@@ -140,7 +136,6 @@ public class PMML {
      * @param value allowed object is
      *              {@link MiningBuildTask }
      */
-    @JsMethod
     public void setMiningBuildTask(MiningBuildTask value) {
         this.miningBuildTask = value;
     }
@@ -151,7 +146,6 @@ public class PMML {
      * @return possible object is
      * {@link DataDictionary }
      */
-    @JsMethod
     public DataDictionary getDataDictionary() {
         return dataDictionary;
     }
@@ -162,7 +156,6 @@ public class PMML {
      * @param value allowed object is
      *              {@link DataDictionary }
      */
-    @JsMethod
     public void setDataDictionary(DataDictionary value) {
         this.dataDictionary = value;
     }
@@ -173,7 +166,6 @@ public class PMML {
      * @return possible object is
      * {@link TransformationDictionary }
      */
-    @JsMethod
     public TransformationDictionary getTransformationDictionary() {
         return transformationDictionary;
     }
@@ -184,7 +176,6 @@ public class PMML {
      * @param value allowed object is
      *              {@link TransformationDictionary }
      */
-    @JsMethod
     public void setTransformationDictionary(TransformationDictionary value) {
         this.transformationDictionary = value;
     }
@@ -227,7 +218,6 @@ public class PMML {
      * {@link TimeSeriesModel }
      * {@link TreeModel }
      */
-    @JsMethod
     public List<IPMML> getAnomalyDetectionModelOrAssociationModelOrBayesianNetworkModel() {
         if (anomalyDetectionModelOrAssociationModelOrBayesianNetworkModel == null) {
             anomalyDetectionModelOrAssociationModelOrBayesianNetworkModel = new ArrayList<IPMML>();
@@ -255,7 +245,6 @@ public class PMML {
      * Objects of the following type(s) are allowed in the list
      * {@link Extension }
      */
-    @JsMethod
     public List<Extension> getExtension() {
         if (extension == null) {
             extension = new ArrayList<Extension>();
@@ -269,7 +258,6 @@ public class PMML {
      * @return possible object is
      * {@link String }
      */
-    @JsMethod
     public String getVersion() {
         return version;
     }
@@ -280,7 +268,6 @@ public class PMML {
      * @param value allowed object is
      *              {@link String }
      */
-    @JsMethod
     public void setVersion(String value) {
         this.version = value;
     }

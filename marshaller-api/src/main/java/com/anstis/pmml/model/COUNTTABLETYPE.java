@@ -16,6 +16,9 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import jsinterop.annotations.JsType;
+import org.treblereel.j2cl.processors.annotations.GWT3Export;
+
 /**
  * <p>Java class for COUNT-TABLE-TYPE complex type.
  *
@@ -44,6 +47,8 @@ import javax.xml.bind.annotation.XmlType;
         "fieldValue",
         "fieldValueCount"
 })
+@JsType
+@GWT3Export
 public class COUNTTABLETYPE {
 
     @XmlElement(name = "Extension")
