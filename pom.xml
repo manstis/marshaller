@@ -65,34 +65,8 @@
         <version>${maven.org.treblereel.j2cl.processors.version}</version>
       </dependency>
 
-      <!-- JSONMapper -->
-      <!--      <dependency>-->
-      <!--        <groupId>org.dominokit.jackson</groupId>-->
-      <!--        <artifactId>jackson-apt</artifactId>-->
-      <!--        <version>1.0-SNAPSHOT</version>-->
-      <!--      </dependency>-->
-      <!--      <dependency>-->
-      <!--        <groupId>org.dominokit.jackson</groupId>-->
-      <!--        <artifactId>jackson-apt-processor</artifactId>-->
-      <!--        <version>1.0-SNAPSHOT</version>-->
-      <!--        <scope>provided</scope>-->
-      <!--      </dependency>-->
-
     </dependencies>
   </dependencyManagement>
-
-  <dependencies>
-    <!-- JSONMapper -->
-    <!--    <dependency>-->
-    <!--      <groupId>org.dominokit.jackson</groupId>-->
-    <!--      <artifactId>jackson-apt</artifactId>-->
-    <!--    </dependency>-->
-    <!--    <dependency>-->
-    <!--      <groupId>org.dominokit.jackson</groupId>-->
-    <!--      <artifactId>jackson-apt-processor</artifactId>-->
-    <!--      <scope>provided</scope>-->
-    <!--    </dependency>-->
-  </dependencies>
 
   <build>
     <pluginManagement>
@@ -150,6 +124,7 @@
     <module>marshaller-api</module>
     <module>marshaller-client</module>
     <module>marshaller-server</module>
+    <module>marshaller-jre</module>
   </modules>
 
   <repositories>
