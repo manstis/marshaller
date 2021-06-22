@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlType;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.xml.mapper.api.annotation.Configuration;
 import org.treblereel.gwt.xml.mapper.api.annotation.XMLMapper;
+import org.treblereel.gwt.xml.mapper.api.annotation.XmlUnwrappedCollection;
 import org.treblereel.j2cl.processors.annotations.GWT3Export;
 
 /**
@@ -66,9 +67,8 @@ import org.treblereel.j2cl.processors.annotations.GWT3Export;
 @GWT3Export
 @XMLMapper
 @Configuration(additionalAnnotation = {
-    @Configuration.ConfigurationAnnotation(JsType.class)
-    // TODO {manstis} See https://github.com/treblereel/gwt3-processors/issues/10
-    // @Configuration.ConfigurationAnnotation(GWT3Export.class)
+    @Configuration.ConfigurationAnnotation(JsType.class),
+    @Configuration.ConfigurationAnnotation(GWT3Export.class)
 })
 public class PMML {
 
@@ -101,6 +101,8 @@ public class PMML {
         @XmlElementRef(name = "TimeSeriesModel", namespace = "http://www.dmg.org/PMML-4_4", type = TimeSeriesModel.class, required = false),
         @XmlElementRef(name = "TreeModel", namespace = "http://www.dmg.org/PMML-4_4", type = TreeModel.class, required = false)
     })
+    //{manstis} This is not needed with regular JAXB
+    @XmlUnwrappedCollection
     protected List<IPMML> model;
     @XmlElement(name = "Extension")
     protected List<Extension> extension;
