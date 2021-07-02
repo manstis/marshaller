@@ -8,17 +8,17 @@ import javax.xml.bind.Unmarshaller;
 
 import com.anstis.pmml.model.Attribute;
 import com.anstis.pmml.model.PMML;
-import com.anstis.pmml.model.SimplePredicate;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        JAXBContext context = JAXBContext.newInstance(PMML.class);
+        JAXBContext pmmlContext = JAXBContext.newInstance(PMML.class);
+        PMML pmml = testPMMLUnmarshalling(pmmlContext);
+        testPMMLMarshalling(pmmlContext, pmml);
 
-        PMML pmml = testPMMLUnmarshalling(context);
-        testPMMLMarshalling(context, pmml);
-
-        testAttributeSimplePredicateMarshalling();
+        JAXBContext attributeContext = JAXBContext.newInstance(Attribute.class);
+        Attribute attribute = testAttributeSimplePredicateUnmarshalling(attributeContext);
+        testAttributeSimplePredicateMarshalling(attributeContext, attribute);
     }
 
     private static PMML testPMMLUnmarshalling(JAXBContext context) throws Exception {
@@ -35,12 +35,15 @@ public class Main {
     }
 
     //See https://github.com/treblereel/mapper-xml/issues/84#issuecomment-873138776
-    private static void testAttributeSimplePredicateMarshalling() throws Exception {
-        Attribute attribute = new Attribute();
-        SimplePredicate simplePredicate = new SimplePredicate();
-        attribute.setPredicate(simplePredicate);
+    private static Attribute testAttributeSimplePredicateUnmarshalling(JAXBContext context) throws Exception {
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+        InputStream in = Main.class.getResourceAsStream("/jaxb/attribute.xml");
+        Attribute attribute = (Attribute) unmarshaller.unmarshal(in);
+        return attribute;
+    }
 
-        JAXBContext context = JAXBContext.newInstance(Attribute.class);
+    //See https://github.com/treblereel/mapper-xml/issues/84#issuecomment-873138776
+    private static void testAttributeSimplePredicateMarshalling(JAXBContext context, Attribute attribute) throws Exception {
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         marshaller.marshal(attribute, System.out);
