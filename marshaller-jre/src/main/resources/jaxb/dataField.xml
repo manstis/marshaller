@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DataField xmlns="http://www.dmg.org/PMML-4_4" name="field1" optype="categorical" dataType="string"/>

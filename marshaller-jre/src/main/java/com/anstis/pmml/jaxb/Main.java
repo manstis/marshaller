@@ -7,6 +7,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
 import com.anstis.pmml.model.Attribute;
+import com.anstis.pmml.model.DataField;
 import com.anstis.pmml.model.PMML;
 
 public class Main {
@@ -19,6 +20,10 @@ public class Main {
         JAXBContext attributeContext = JAXBContext.newInstance(Attribute.class);
         Attribute attribute = testAttributeSimplePredicateUnmarshalling(attributeContext);
         testAttributeSimplePredicateMarshalling(attributeContext, attribute);
+
+        JAXBContext dataFieldContext = JAXBContext.newInstance(DataField.class);
+        DataField dataField = testDataFieldDefaultAttributeUnmarshalling(dataFieldContext);
+        testDataFieldDefaultAttributeMarshalling(dataFieldContext, dataField);
     }
 
     private static PMML testPMMLUnmarshalling(JAXBContext context) throws Exception {
@@ -47,5 +52,20 @@ public class Main {
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         marshaller.marshal(attribute, System.out);
+    }
+
+    //See https://issues.redhat.com/browse/KOGITO-5499
+    private static DataField testDataFieldDefaultAttributeUnmarshalling(JAXBContext context) throws Exception {
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+        InputStream in = Main.class.getResourceAsStream("/jaxb/dataField.xml");
+        DataField dataField = (DataField) unmarshaller.unmarshal(in);
+        return dataField;
+    }
+
+    //See https://issues.redhat.com/browse/KOGITO-5499
+    private static void testDataFieldDefaultAttributeMarshalling(JAXBContext context, DataField dataField) throws Exception {
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        marshaller.marshal(dataField, System.out);
     }
 }
