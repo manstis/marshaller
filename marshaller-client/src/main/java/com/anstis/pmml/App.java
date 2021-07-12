@@ -5,6 +5,7 @@ import com.anstis.pmml.model.PMML;
 import com.anstis.pmml.model.PMML_XMLMapperImpl;
 import com.anstis.pmml.model.Scorecard;
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.RootPanel;
@@ -21,10 +22,10 @@ public class App implements EntryPoint {
         loadXMLButton.addClickHandler(clickEvent -> {
             final PMML_XMLMapperImpl mapper = new PMML_XMLMapperImpl();
             try {
-                // See https://github.com/treblereel/mapper-xml/issues/84
-                // XmlElementRefs are no correctly deserialised
-                final PMML pmml = mapper.read(Resources.INSTANCE.xml().getText());
+                String xml = Resources.INSTANCE.xml().getText();
+                final PMML pmml = mapper.read(xml);
                 Window.alert(pmml.getHeader().getDescription());
+                GWT.log(xml);
             } catch (Exception e) {
                 Window.alert(e.getMessage());
             }
@@ -35,8 +36,6 @@ public class App implements EntryPoint {
         saveXMLButton.addClickHandler(clickEvent -> {
             final PMML_XMLMapperImpl mapper = new PMML_XMLMapperImpl();
             try {
-                // See https://github.com/treblereel/mapper-xml/issues/84
-                // XmlElementRefs are no correctly serialised
                 final PMML pmml = new PMML();
                 final Header header = new Header();
                 header.setDescription("Test description");
@@ -49,6 +48,27 @@ public class App implements EntryPoint {
 
                 final String xml = mapper.write(pmml);
                 Window.alert(xml);
+                GWT.log(xml);
+            } catch (Exception e) {
+                Window.alert(e.getMessage());
+            }
+        });
+
+        final Button roundTripXMLButtonButton = new Button("Roundtrip XML");
+        RootPanel.get("roundTripXMLButtonContainer").add(roundTripXMLButtonButton);
+        roundTripXMLButtonButton.addClickHandler(clickEvent -> {
+            final PMML_XMLMapperImpl mapper = new PMML_XMLMapperImpl();
+            try {
+                final String read = Resources.INSTANCE.xml().getText();
+                GWT.log("Read -->\n");
+                GWT.log(read);
+                final PMML pmml = mapper.read(read);
+                Window.alert(pmml.getHeader().getDescription());
+
+                final String written = mapper.write(pmml);
+                Window.alert(written);
+                GWT.log("Written -->\n");
+                GWT.log(written);
             } catch (Exception e) {
                 Window.alert(e.getMessage());
             }

@@ -5,7 +5,6 @@
 // Generated on: 2021.06.09 at 01:19:52 PM BST 
 //
 
-
 package com.anstis.pmml.model;
 
 import java.util.ArrayList;
@@ -23,7 +22,6 @@ import javax.xml.bind.annotation.XmlType;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.xml.mapper.api.annotation.Configuration;
 import org.treblereel.gwt.xml.mapper.api.annotation.XMLMapper;
-import org.treblereel.gwt.xml.mapper.api.annotation.XmlUnwrappedCollection;
 import org.treblereel.j2cl.processors.annotations.GWT3Export;
 
 /**
@@ -50,25 +48,23 @@ import org.treblereel.j2cl.processors.annotations.GWT3Export;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- *
- *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "header",
-    "miningBuildTask",
-    "dataDictionary",
-    "transformationDictionary",
-    "model",
-    "extension"
+        "header",
+        "miningBuildTask",
+        "dataDictionary",
+        "transformationDictionary",
+        "model",
+        "extension"
 })
 @XmlRootElement(name = "PMML")
 @JsType
 @GWT3Export
 @XMLMapper
 @Configuration(additionalAnnotation = {
-    @Configuration.ConfigurationAnnotation(JsType.class),
-    @Configuration.ConfigurationAnnotation(GWT3Export.class)
+        @Configuration.ConfigurationAnnotation(JsType.class),
+        @Configuration.ConfigurationAnnotation(GWT3Export.class)
 })
 public class PMML {
 
@@ -81,28 +77,26 @@ public class PMML {
     @XmlElement(name = "TransformationDictionary")
     protected TransformationDictionary transformationDictionary;
     @XmlElementRefs({
-        @XmlElementRef(name = "AnomalyDetectionModel", namespace = "http://www.dmg.org/PMML-4_4", type = AnomalyDetectionModel.class, required = false),
-        @XmlElementRef(name = "AssociationModel", namespace = "http://www.dmg.org/PMML-4_4", type = AssociationModel.class, required = false),
-        @XmlElementRef(name = "BayesianNetworkModel", namespace = "http://www.dmg.org/PMML-4_4", type = BayesianNetworkModel.class, required = false),
-        @XmlElementRef(name = "BaselineModel", namespace = "http://www.dmg.org/PMML-4_4", type = BaselineModel.class, required = false),
-        @XmlElementRef(name = "ClusteringModel", namespace = "http://www.dmg.org/PMML-4_4", type = ClusteringModel.class, required = false),
-        @XmlElementRef(name = "GaussianProcessModel", namespace = "http://www.dmg.org/PMML-4_4", type = GaussianProcessModel.class, required = false),
-        @XmlElementRef(name = "GeneralRegressionModel", namespace = "http://www.dmg.org/PMML-4_4", type = GeneralRegressionModel.class, required = false),
-        @XmlElementRef(name = "MiningModel", namespace = "http://www.dmg.org/PMML-4_4", type = MiningModel.class, required = false),
-        @XmlElementRef(name = "NaiveBayesModel", namespace = "http://www.dmg.org/PMML-4_4", type = NaiveBayesModel.class, required = false),
-        @XmlElementRef(name = "NearestNeighborModel", namespace = "http://www.dmg.org/PMML-4_4", type = NearestNeighborModel.class, required = false),
-        @XmlElementRef(name = "NeuralNetwork", namespace = "http://www.dmg.org/PMML-4_4", type = NeuralNetwork.class, required = false),
-        @XmlElementRef(name = "RegressionModel", namespace = "http://www.dmg.org/PMML-4_4", type = RegressionModel.class, required = false),
-        @XmlElementRef(name = "RuleSetModel", namespace = "http://www.dmg.org/PMML-4_4", type = RuleSetModel.class, required = false),
-        @XmlElementRef(name = "SequenceModel", namespace = "http://www.dmg.org/PMML-4_4", type = SequenceModel.class, required = false),
-        @XmlElementRef(name = "Scorecard", namespace = "http://www.dmg.org/PMML-4_4", type = Scorecard.class, required = false),
-        @XmlElementRef(name = "SupportVectorMachineModel", namespace = "http://www.dmg.org/PMML-4_4", type = SupportVectorMachineModel.class, required = false),
-        @XmlElementRef(name = "TextModel", namespace = "http://www.dmg.org/PMML-4_4", type = TextModel.class, required = false),
-        @XmlElementRef(name = "TimeSeriesModel", namespace = "http://www.dmg.org/PMML-4_4", type = TimeSeriesModel.class, required = false),
-        @XmlElementRef(name = "TreeModel", namespace = "http://www.dmg.org/PMML-4_4", type = TreeModel.class, required = false)
+            @XmlElementRef(name = "AnomalyDetectionModel", namespace = "http://www.dmg.org/PMML-4_4", type = AnomalyDetectionModel.class, required = false),
+            @XmlElementRef(name = "AssociationModel", namespace = "http://www.dmg.org/PMML-4_4", type = AssociationModel.class, required = false),
+            @XmlElementRef(name = "BayesianNetworkModel", namespace = "http://www.dmg.org/PMML-4_4", type = BayesianNetworkModel.class, required = false),
+            @XmlElementRef(name = "BaselineModel", namespace = "http://www.dmg.org/PMML-4_4", type = BaselineModel.class, required = false),
+            @XmlElementRef(name = "ClusteringModel", namespace = "http://www.dmg.org/PMML-4_4", type = ClusteringModel.class, required = false),
+            @XmlElementRef(name = "GaussianProcessModel", namespace = "http://www.dmg.org/PMML-4_4", type = GaussianProcessModel.class, required = false),
+            @XmlElementRef(name = "GeneralRegressionModel", namespace = "http://www.dmg.org/PMML-4_4", type = GeneralRegressionModel.class, required = false),
+            @XmlElementRef(name = "MiningModel", namespace = "http://www.dmg.org/PMML-4_4", type = MiningModel.class, required = false),
+            @XmlElementRef(name = "NaiveBayesModel", namespace = "http://www.dmg.org/PMML-4_4", type = NaiveBayesModel.class, required = false),
+            @XmlElementRef(name = "NearestNeighborModel", namespace = "http://www.dmg.org/PMML-4_4", type = NearestNeighborModel.class, required = false),
+            @XmlElementRef(name = "NeuralNetwork", namespace = "http://www.dmg.org/PMML-4_4", type = NeuralNetwork.class, required = false),
+            @XmlElementRef(name = "RegressionModel", namespace = "http://www.dmg.org/PMML-4_4", type = RegressionModel.class, required = false),
+            @XmlElementRef(name = "RuleSetModel", namespace = "http://www.dmg.org/PMML-4_4", type = RuleSetModel.class, required = false),
+            @XmlElementRef(name = "SequenceModel", namespace = "http://www.dmg.org/PMML-4_4", type = SequenceModel.class, required = false),
+            @XmlElementRef(name = "Scorecard", namespace = "http://www.dmg.org/PMML-4_4", type = Scorecard.class, required = false),
+            @XmlElementRef(name = "SupportVectorMachineModel", namespace = "http://www.dmg.org/PMML-4_4", type = SupportVectorMachineModel.class, required = false),
+            @XmlElementRef(name = "TextModel", namespace = "http://www.dmg.org/PMML-4_4", type = TextModel.class, required = false),
+            @XmlElementRef(name = "TimeSeriesModel", namespace = "http://www.dmg.org/PMML-4_4", type = TimeSeriesModel.class, required = false),
+            @XmlElementRef(name = "TreeModel", namespace = "http://www.dmg.org/PMML-4_4", type = TreeModel.class, required = false)
     })
-    //{manstis} This is not needed with regular JAXB
-    @XmlUnwrappedCollection
     protected List<IPMML> model;
     @XmlElement(name = "Extension")
     protected List<Extension> extension;
@@ -112,10 +106,8 @@ public class PMML {
     /**
      * Gets the value of the header property.
      *
-     * @return
-     *     possible object is
-     *     {@link Header }
-     *
+     * @return possible object is
+     * {@link Header }
      */
     public Header getHeader() {
         return header;
@@ -124,10 +116,8 @@ public class PMML {
     /**
      * Sets the value of the header property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link Header }
-     *
+     * @param value allowed object is
+     *              {@link Header }
      */
     public void setHeader(Header value) {
         this.header = value;
@@ -136,10 +126,8 @@ public class PMML {
     /**
      * Gets the value of the miningBuildTask property.
      *
-     * @return
-     *     possible object is
-     *     {@link MiningBuildTask }
-     *
+     * @return possible object is
+     * {@link MiningBuildTask }
      */
     public MiningBuildTask getMiningBuildTask() {
         return miningBuildTask;
@@ -148,10 +136,8 @@ public class PMML {
     /**
      * Sets the value of the miningBuildTask property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link MiningBuildTask }
-     *
+     * @param value allowed object is
+     *              {@link MiningBuildTask }
      */
     public void setMiningBuildTask(MiningBuildTask value) {
         this.miningBuildTask = value;
@@ -160,10 +146,8 @@ public class PMML {
     /**
      * Gets the value of the dataDictionary property.
      *
-     * @return
-     *     possible object is
-     *     {@link DataDictionary }
-     *
+     * @return possible object is
+     * {@link DataDictionary }
      */
     public DataDictionary getDataDictionary() {
         return dataDictionary;
@@ -172,10 +156,8 @@ public class PMML {
     /**
      * Sets the value of the dataDictionary property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link DataDictionary }
-     *
+     * @param value allowed object is
+     *              {@link DataDictionary }
      */
     public void setDataDictionary(DataDictionary value) {
         this.dataDictionary = value;
@@ -184,10 +166,8 @@ public class PMML {
     /**
      * Gets the value of the transformationDictionary property.
      *
-     * @return
-     *     possible object is
-     *     {@link TransformationDictionary }
-     *
+     * @return possible object is
+     * {@link TransformationDictionary }
      */
     public TransformationDictionary getTransformationDictionary() {
         return transformationDictionary;
@@ -196,10 +176,8 @@ public class PMML {
     /**
      * Sets the value of the transformationDictionary property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link TransformationDictionary }
-     *
+     * @param value allowed object is
+     *              {@link TransformationDictionary }
      */
     public void setTransformationDictionary(TransformationDictionary value) {
         this.transformationDictionary = value;
@@ -242,8 +220,6 @@ public class PMML {
      * {@link TextModel }
      * {@link TimeSeriesModel }
      * {@link TreeModel }
-     *
-     *
      */
     public List<IPMML> getModel() {
         if (model == null) {
@@ -271,8 +247,6 @@ public class PMML {
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Extension }
-     *
-     *
      */
     public List<Extension> getExtension() {
         if (extension == null) {
@@ -284,10 +258,8 @@ public class PMML {
     /**
      * Gets the value of the version property.
      *
-     * @return
-     *     possible object is
-     *     {@link String }
-     *
+     * @return possible object is
+     * {@link String }
      */
     public String getVersion() {
         return version;
@@ -296,13 +268,10 @@ public class PMML {
     /**
      * Sets the value of the version property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setVersion(String value) {
         this.version = value;
     }
-
 }
