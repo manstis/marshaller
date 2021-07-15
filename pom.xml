@@ -24,6 +24,9 @@
     <maven.j2cl.plugin.version>0.17-SNAPSHOT</maven.j2cl.plugin.version>
     <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
 
+    <!-- PMML related properties -->
+    <org.manstis.pmml-codegen.version>0.0.0</org.manstis.pmml-codegen.version>
+
   </properties>
 
   <dependencyManagement>
@@ -34,6 +37,20 @@
         <version>2.9.0</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+
+      <!-- PMML versioned model -->
+      <dependency>
+        <groupId>org.manstis</groupId>
+        <artifactId>pmml-codegen-api</artifactId>
+        <version>${org.manstis.pmml-codegen.version}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.manstis</groupId>
+        <artifactId>pmml-codegen-model</artifactId>
+        <version>${org.manstis.pmml-codegen.version}</version>
+        <classifier>sources</classifier>
       </dependency>
 
       <!-- XMLMapper (XML (un)marshaller code generation) -->
