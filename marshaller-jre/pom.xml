@@ -11,8 +11,6 @@
   <artifactId>marshaller-jre</artifactId>
   <packaging>jar</packaging>
 
-
-
   <dependencyManagement>
     <dependencies>
       <dependency>
