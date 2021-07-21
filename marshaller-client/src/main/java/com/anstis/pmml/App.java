@@ -1,9 +1,8 @@
 package com.anstis.pmml;
 
-import com.anstis.pmml.model.Header;
-import com.anstis.pmml.model.PMML;
-import com.anstis.pmml.model.PMML_XMLMapperImpl;
-import com.anstis.pmml.model.Scorecard;
+import com.anstis.pmml.model.api.Header;
+import com.anstis.pmml.model.api.PMML;
+import com.anstis.pmml.model.impl.v4_4.PMML_XMLMapperImpl;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Window;
@@ -36,14 +35,14 @@ public class App implements EntryPoint {
         saveXMLButton.addClickHandler(clickEvent -> {
             final PMML_XMLMapperImpl mapper = new PMML_XMLMapperImpl();
             try {
-                final PMML pmml = new PMML();
-                final Header header = new Header();
+                final PMML pmml = new com.anstis.pmml.model.impl.v4_4.PMML();
+                final Header header = new com.anstis.pmml.model.impl.v4_4.Header();
                 header.setDescription("Test description");
                 header.setCopyright("Test copyright");
                 header.setModelVersion("Test");
                 pmml.setHeader(header);
 
-                final Scorecard scorecard = new Scorecard();
+                final com.anstis.pmml.model.impl.v4_4.Scorecard scorecard = new com.anstis.pmml.model.impl.v4_4.Scorecard();
                 pmml.getModel().add(scorecard);
 
                 final String xml = mapper.write(pmml);

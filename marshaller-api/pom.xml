@@ -22,22 +22,22 @@
       <groupId>org.treblereel.gwt.xml.mapper</groupId>
       <artifactId>api</artifactId>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>org.treblereel.gwt.xml.mapper</groupId>-->
-<!--      <artifactId>processor</artifactId>-->
-<!--      <scope>provided</scope>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>org.treblereel.gwt.xml.mapper</groupId>
+      <artifactId>processor</artifactId>
+      <scope>provided</scope>
+    </dependency>
 
     <!-- GWT3 Mappers (J2CL boiler plate code generation)  -->
     <dependency>
       <groupId>org.treblereel.j2cl.processors</groupId>
       <artifactId>annotations</artifactId>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>org.treblereel.j2cl.processors</groupId>-->
-<!--      <artifactId>processors</artifactId>-->
-<!--      <scope>provided</scope>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>org.treblereel.j2cl.processors</groupId>
+      <artifactId>processors</artifactId>
+      <scope>provided</scope>
+    </dependency>
 
   </dependencies>
 
@@ -46,31 +46,31 @@
     <plugins>
 
       <!-- J2CL -->
-<!--      <plugin>-->
-<!--        <artifactId>maven-compiler-plugin</artifactId>-->
-<!--        <version>${maven.compiler.plugin.version}</version>-->
-<!--        <configuration>-->
-<!--          <source>${maven.compiler.source}</source>-->
-<!--          <target>${maven.compiler.target}</target>-->
-<!--        </configuration>-->
-<!--      </plugin>-->
-<!--      <plugin>-->
-<!--        <groupId>com.vertispan.j2cl</groupId>-->
-<!--        <artifactId>j2cl-maven-plugin</artifactId>-->
-<!--        <version>${maven.j2cl.plugin.version}</version>-->
-<!--        <configuration>-->
-<!--          <compilationLevel>ADVANCED_OPTIMIZATIONS</compilationLevel>-->
-<!--        </configuration>-->
-<!--        <executions>-->
-<!--          <execution>-->
-<!--            <id>build-js</id>-->
-<!--            <phase>generate-sources</phase>-->
-<!--            <goals>-->
-<!--              <goal>build</goal>-->
-<!--            </goals>-->
-<!--          </execution>-->
-<!--        </executions>-->
-<!--      </plugin>-->
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven.compiler.plugin.version}</version>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.vertispan.j2cl</groupId>
+        <artifactId>j2cl-maven-plugin</artifactId>
+        <version>${maven.j2cl.plugin.version}</version>
+        <configuration>
+          <compilationLevel>ADVANCED_OPTIMIZATIONS</compilationLevel>
+        </configuration>
+        <executions>
+          <execution>
+            <id>build-js</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>build</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 
       <!-- Create a source JAR (for now) as this module is still used by the GWT example webapp -->
       <plugin>

@@ -141,8 +141,8 @@
 
   <modules>
     <module>marshaller-api</module>
-<!--    <module>marshaller-client</module>-->
-<!--    <module>marshaller-server</module>-->
+    <module>marshaller-client</module>
+    <module>marshaller-server</module>
     <module>marshaller-jre</module>
   </modules>
 
