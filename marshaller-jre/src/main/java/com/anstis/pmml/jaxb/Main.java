@@ -6,10 +6,6 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import com.anstis.pmml.model.impl.v4_4.Attribute;
-import com.anstis.pmml.model.impl.v4_4.DataField;
-import com.anstis.pmml.model.impl.v4_4.PMML;
-
 public class Main {
 
     public static void main(String[] args) throws Exception {
