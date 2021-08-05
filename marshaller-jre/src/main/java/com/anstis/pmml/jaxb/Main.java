@@ -6,9 +6,9 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import com.anstis.pmml.model.Attribute;
-import com.anstis.pmml.model.DataField;
-import com.anstis.pmml.model.PMML;
+import com.anstis.pmml.model.impl.v4_4.Attribute;
+import com.anstis.pmml.model.impl.v4_4.DataField;
+import com.anstis.pmml.model.impl.v4_4.PMML;
 
 public class Main {
 

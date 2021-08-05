@@ -6,10 +6,5 @@
   <!-- XMLMapper -->
   <inherits name="org.treblereel.gwt.xml.mapper.Mapper"/>
 
-  <!-- JSONMapper -->
-  <!--  <inherits name="org.dominokit.jacksonapt.GwtJacksonApt"/>-->
-
-  <entry-point class="com.anstis.pmml.MarshallerAPI"/>
-
   <source path=""/>
 </module>

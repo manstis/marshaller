@@ -19,32 +19,6 @@
       <artifactId>pmml-model-distribution</artifactId>
     </dependency>
 
-    <!-- XMLMapper (XML (un)marshaller code generation) -->
-    <dependency>
-      <groupId>org.treblereel.gwt.xml.mapper</groupId>
-      <artifactId>gwt-backend</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.treblereel.gwt.xml.mapper</groupId>
-      <artifactId>api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.treblereel.gwt.xml.mapper</groupId>
-      <artifactId>processor</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
-    <!-- GWT3 Mappers (J2CL boiler plate code generation)  -->
-    <dependency>
-      <groupId>org.treblereel.j2cl.processors</groupId>
-      <artifactId>annotations</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.treblereel.j2cl.processors</groupId>
-      <artifactId>processors</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
   </dependencies>
 
   <build>

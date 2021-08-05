@@ -48,35 +48,6 @@
         <version>${org.manstis.pmml-codegen.version}</version>
       </dependency>
 
-      <!-- XMLMapper (XML (un)marshaller code generation) -->
-      <dependency>
-        <groupId>org.treblereel.gwt.xml.mapper</groupId>
-        <artifactId>gwt-backend</artifactId>
-        <version>${maven.org.treblereel.gwt.xml.mapper.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.treblereel.gwt.xml.mapper</groupId>
-        <artifactId>api</artifactId>
-        <version>${maven.org.treblereel.gwt.xml.mapper.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.treblereel.gwt.xml.mapper</groupId>
-        <artifactId>processor</artifactId>
-        <version>${maven.org.treblereel.gwt.xml.mapper.version}</version>
-      </dependency>
-
-      <!-- GWT3 Mappers (J2CL boiler plate code generation)  -->
-      <dependency>
-        <groupId>org.treblereel.j2cl.processors</groupId>
-        <artifactId>annotations</artifactId>
-        <version>${maven.org.treblereel.j2cl.processors.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.treblereel.j2cl.processors</groupId>
-        <artifactId>processors</artifactId>
-        <version>${maven.org.treblereel.j2cl.processors.version}</version>
-      </dependency>
-
     </dependencies>
   </dependencyManagement>
 
