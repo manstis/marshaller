@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.anstis.pmml</groupId>
+  <groupId>org.manstis.pmml</groupId>
   <artifactId>marshaller</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -18,7 +18,7 @@
     <maven.jetty.plugin.version>9.4.26.v20200117</maven.jetty.plugin.version>
     <maven.tomcat7.plugin.version>2.2</maven.tomcat7.plugin.version>
 
-    <maven.org.treblereel.gwt.xml.mapper.version>0.3-SNAPSHOT</maven.org.treblereel.gwt.xml.mapper.version>
+    <maven.org.treblereel.gwt.xml.mapper.version>0.4-SNAPSHOT</maven.org.treblereel.gwt.xml.mapper.version>
     <maven.org.treblereel.j2cl.processors.version>0.3-SNAPSHOT</maven.org.treblereel.j2cl.processors.version>
 
     <!-- J2CL related properties -->
@@ -44,15 +44,8 @@
       <!-- PMML versioned model -->
       <dependency>
         <groupId>org.manstis</groupId>
-        <artifactId>pmml-codegen-api</artifactId>
+        <artifactId>pmml-model-distribution</artifactId>
         <version>${org.manstis.pmml-codegen.version}</version>
-        <classifier>sources</classifier>
-      </dependency>
-      <dependency>
-        <groupId>org.manstis</groupId>
-        <artifactId>pmml-codegen-model</artifactId>
-        <version>${org.manstis.pmml-codegen.version}</version>
-        <classifier>sources</classifier>
       </dependency>
 
       <!-- XMLMapper (XML (un)marshaller code generation) -->

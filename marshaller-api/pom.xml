@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.anstis.pmml</groupId>
+    <groupId>org.manstis.pmml</groupId>
     <artifactId>marshaller</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
@@ -16,41 +16,7 @@
     <!-- PMML versioned model -->
     <dependency>
       <groupId>org.manstis</groupId>
-      <artifactId>pmml-codegen-api</artifactId>
-      <classifier>sources</classifier>
-      <exclusions>
-        <exclusion>
-          <groupId>javax.xml.bind</groupId>
-          <artifactId>jaxb-api</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.jvnet.jaxb2.maven2</groupId>
-          <artifactId>maven-jaxb2-plugin</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.manstis</groupId>
-      <artifactId>pmml-codegen-model</artifactId>
-      <classifier>sources</classifier>
-      <exclusions>
-        <exclusion>
-          <groupId>javax.xml.bind</groupId>
-          <artifactId>jaxb-api</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.jvnet.jaxb2_commons</groupId>
-          <artifactId>jaxb2-basics</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.jvnet.jaxb2_commons</groupId>
-          <artifactId>jaxb2-basics-annotate</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.jvnet.jaxb2.maven2</groupId>
-          <artifactId>maven-jaxb2-plugin</artifactId>
-        </exclusion>
-      </exclusions>
+      <artifactId>pmml-model-distribution</artifactId>
     </dependency>
 
     <!-- XMLMapper (XML (un)marshaller code generation) -->

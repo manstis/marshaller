@@ -1,9 +1,5 @@
 package com.anstis.pmml;
 
-import com.anstis.pmml.model.Header;
-import com.anstis.pmml.model.PMML;
-import com.anstis.pmml.model.PMML_XMLMapperImpl;
-import com.anstis.pmml.model.Scorecard;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Window;
@@ -23,7 +19,7 @@ public class App implements EntryPoint {
             final PMML_XMLMapperImpl mapper = new PMML_XMLMapperImpl();
             try {
                 String xml = Resources.INSTANCE.xml().getText();
-                final PMML pmml = mapper.read(xml);
+                final com.anstis.pmml.model.api.PMML pmml = mapper.read(xml);
                 Window.alert(pmml.getHeader().getDescription());
                 GWT.log(xml);
             } catch (Exception e) {
@@ -36,14 +32,16 @@ public class App implements EntryPoint {
         saveXMLButton.addClickHandler(clickEvent -> {
             final PMML_XMLMapperImpl mapper = new PMML_XMLMapperImpl();
             try {
-                final PMML pmml = new PMML();
-                final Header header = new Header();
+                final com.anstis.pmml.model.api.PMML pmml = new com.anstis.pmml.model.impl.v4_4.PMML();
+                final com.anstis.pmml.model.api.Header header = new com.anstis.pmml.model.impl.v4_4.Header();
                 header.setDescription("Test description");
                 header.setCopyright("Test copyright");
                 header.setModelVersion("Test");
                 pmml.setHeader(header);
 
-                final Scorecard scorecard = new Scorecard();
+                // See https://issues.redhat.com/browse/KOGITO-5640
+                // For now we need to use the concrete class type and not the interface
+                final com.anstis.pmml.model.impl.v4_4.Scorecard scorecard = new com.anstis.pmml.model.impl.v4_4.Scorecard();
                 pmml.getModel().add(scorecard);
 
                 final String xml = mapper.write(pmml);
