@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <inherits name="com.google.gwt.user.User"/>
+  <inherits name="com.google.gwt.user.theme.clean.Clean"/>
+
+  <!-- XMLMapper -->
+  <inherits name="org.treblereel.gwt.xml.mapper.Mapper"/>
+
+  <entry-point class="com.anstis.pmml.App"/>
+
+  <set-property name="user.agent" value="safari"/>
+
+  <source path=""/>
+
+</module>

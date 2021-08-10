@@ -4,16 +4,20 @@
 
   <parent>
     <groupId>org.manstis.pmml</groupId>
-    <artifactId>marshaller</artifactId>
+    <artifactId>marshaller-jre</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>marshaller-jre</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>marshaller-jre-mapper-xml</artifactId>
+  <packaging>jar</packaging>
 
-  <modules>
-    <module>marshaller-jre-jaxb</module>
-    <module>marshaller-jre-mapper-xml</module>
-  </modules>
+  <dependencies>
+    <!-- PMML versioned model -->
+    <dependency>
+      <groupId>org.manstis</groupId>
+      <artifactId>pmml-impl-v44-jre</artifactId>
+    </dependency>
+
+  </dependencies>
 
 </project>

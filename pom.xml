@@ -19,12 +19,13 @@
     <maven.tomcat7.plugin.version>2.2</maven.tomcat7.plugin.version>
 
     <maven.org.treblereel.gwt.xml.mapper.version>0.4-SNAPSHOT</maven.org.treblereel.gwt.xml.mapper.version>
-    <maven.org.treblereel.j2cl.processors.version>0.3-SNAPSHOT</maven.org.treblereel.j2cl.processors.version>
 
     <!-- J2CL related properties -->
-    <maven.j2cl.plugin.version>0.17-SNAPSHOT</maven.j2cl.plugin.version>
+    <maven.j2cl.plugin.version>0.18-SNAPSHOT</maven.j2cl.plugin.version>
     <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
     <vertispan.gwt-snapshot.repo.url>https://repo.vertispan.com/gwt-snapshot/</vertispan.gwt-snapshot.repo.url>
+    <version.com.google.jsinterop.jsinterop-annotations>2.0.0</version.com.google.jsinterop.jsinterop-annotations>
+    <version.com.google.jsinterop.base>1.0.0</version.com.google.jsinterop.base>
 
     <!-- PMML related properties -->
     <org.manstis.pmml-codegen.version>0.0.0</org.manstis.pmml-codegen.version>
@@ -33,18 +34,38 @@
 
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>com.google.gwt</groupId>
-        <artifactId>gwt</artifactId>
-        <version>${com.google.gwt.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
 
       <!-- PMML versioned model -->
       <dependency>
         <groupId>org.manstis</groupId>
-        <artifactId>pmml-model-distribution</artifactId>
+        <artifactId>pmml-api</artifactId>
+        <version>${org.manstis.pmml-codegen.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.manstis</groupId>
+        <artifactId>pmml-api</artifactId>
+        <version>${org.manstis.pmml-codegen.version}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.manstis</groupId>
+        <artifactId>pmml-impl-v44-browsers</artifactId>
+        <version>${org.manstis.pmml-codegen.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.manstis</groupId>
+        <artifactId>pmml-impl-v44-browsers</artifactId>
+        <version>${org.manstis.pmml-codegen.version}</version>
+        <classifier>sources</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.manstis</groupId>
+        <artifactId>pmml-impl-v44-dist-j2cl</artifactId>
+        <version>${org.manstis.pmml-codegen.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.manstis</groupId>
+        <artifactId>pmml-impl-v44-jre</artifactId>
         <version>${org.manstis.pmml-codegen.version}</version>
       </dependency>
 
@@ -104,9 +125,8 @@
   </build>
 
   <modules>
-    <module>marshaller-api</module>
-    <module>marshaller-client</module>
-    <module>marshaller-server</module>
+    <module>marshaller-j2cl</module>
+    <module>marshaller-gwt</module>
     <module>marshaller-jre</module>
   </modules>
 
